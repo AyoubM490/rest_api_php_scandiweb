@@ -88,7 +88,8 @@ class Furniture
         $stmt->bindParam(':width', $this->width);
         $stmt->bindParam(':length', $this->length);
 
-        if ($stmt->execute()) {
+        if ($this->sku != '') {
+            $stmt->execute();
             return true;
         }
 

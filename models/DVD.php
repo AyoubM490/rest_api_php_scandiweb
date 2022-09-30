@@ -78,7 +78,8 @@ class DVD
         $stmt->bindParam(":size", $this->size);
         $stmt->bindParam(":id", $this->id);
 
-        if ($stmt->execute()) {
+        if ($this->sku != '') {
+            $stmt->execute();
             return true;
         }
 
