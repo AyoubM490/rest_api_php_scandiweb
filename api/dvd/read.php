@@ -30,9 +30,7 @@ if ($num > 0) {
         );
 
         array_push($dvds_arr["data"], $dvd_item);
-    }
-
-    http_response_code(200);
+    };
 
     echo json_encode($dvds_arr);
 } else {
