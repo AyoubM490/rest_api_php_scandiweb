@@ -1,6 +1,4 @@
-CREATE DATABASE IF NOT EXISTS `scandi_api`;
-
-USE `scandi_api`;
+USE `heroku_34fe46c9712aa54`;
 CREATE TABLE `books` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `sku` varchar(255) NOT NULL,
