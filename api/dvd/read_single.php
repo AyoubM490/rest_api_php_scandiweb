@@ -3,7 +3,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
-include_once '../../Database.php';
+include_once '../../config/Database.php';
 include_once '../../models/Dvd.php';
 
 $database = new Database();
