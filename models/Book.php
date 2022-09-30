@@ -58,7 +58,7 @@ class Book
         $stmt->bindParam(':price', $this->price);
         $stmt->bindParam(':weight', $this->weight);
 
-        if ($stmt->execute()) {
+        if ($this->sku != '' && $stmt->execute()) {
             return true;
         }
 
