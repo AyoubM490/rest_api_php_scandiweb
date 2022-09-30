@@ -6,7 +6,7 @@ header("Access-Control-Allow-Methods: DELETE");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 include_once '../../config/Database.php';
-include_once '../../models/Dvd.php';
+include_once '../../models/DVD.php';
 
 $database = new Database();
 $db = $database->connect();
