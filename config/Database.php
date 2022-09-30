@@ -1,10 +1,10 @@
 <?php
 class Database
 {
-    private $host = "localhost";
-    private $db_name = "scandi_api";
-    private $username = "root";
-    private $password = "123456";
+    private $host = "us-cdbr-east-06.cleardb.net";
+    private $db_name = "heroku_34fe46c9712aa54";
+    private $username = "bd31a3d5a96387";
+    private $password = "c82f3aa9";
     public $conn;
 
     public function connect()
