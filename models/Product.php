@@ -87,7 +87,7 @@ class Product extends Products
         if (count($prod_ids) > 0) {
             $params_string = "";
             foreach ($prod_ids as $prod) {
-                $params_string .= $prod["id"] . ",";
+                $params_string .= $prod["id"];
             }
             $params_string = trim($params_string, ",");
             $del_prods = $this->conn->query("DELETE FROM `products` WHERE `id` IN (" . $params_string . ")")->rowCount();
