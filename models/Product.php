@@ -13,12 +13,6 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 header('Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS');
 header('Content-Type: application/json');
 
-//for production
-// header('Access-Control-Allow-Origin: https://scandi-app.000webhostapp.com/');//resources allowed
-// header('Access-Control-Allow-Headers: Origin, Content-type');
-// header('Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS');
-// header('Content-Type: application/json');
-
 class Product extends Products
 {
     private $errors;
