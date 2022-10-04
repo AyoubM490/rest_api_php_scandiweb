@@ -90,7 +90,7 @@ class Product extends Products
                 $params_string .= $prod["id"] . ",";
             }
             $params_string = trim($params_string, ",");
-            $del_prods = $this->conn->query("DELETE FROM `products` WHERE `id` IN (" . $params_string . ")")->rowCount();
+            $del_prods = $this->conn->query("DELETE FROM `products` WHERE `id` IN (" . $params_string . ") LIMIT 1")->rowCount();
             $del_ref = $this->conn->query("DELETE FROM `keys_and_values` WHERE `prod_id` IN (" . $params_string . ")")->rowCount();
             if (($del_ref > 0 && $del_prods > 0)) {
                 return $this->msg("{$del_ref} row(s) were successfuly deleted");
