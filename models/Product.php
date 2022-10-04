@@ -83,7 +83,7 @@ class Product extends Products
             $params_string .= "'{$sku}',";
         }
         $params_string = trim($params_string, ",");
-        $prod_ids = $this->conn->query("SELECT `id` FROM `products` WHERE `sku` IN ({$params_string})")->fetch(PDO::FETCH_ASSOC);
+        $prod_ids = $this->conn->query("SELECT `id` FROM `products` WHERE `sku` IN ({$params_string})")->fetchAll(PDO::FETCH_ASSOC);
         if (count($prod_ids) > 0) {
             $params_string = "";
             foreach ($prod_ids as $prod) {
